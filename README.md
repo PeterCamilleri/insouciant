@@ -1,17 +1,26 @@
 # Insouciant
 
 Now I recognize that sound computer science practices dictate that all code
-should strive to handle, on some level, all exceptions that may come up.
+should always strive to handle, on some level, all exceptions that may come up.
 
 The reality is there are cases when you may not be aware, let alone in control
 of all the possible sources of errors. Sometimes, it would be nice to have
 your troublesome code run, and NOT bring the house down because some host is
 unreachable or some other error beyond your control.
 
-The insouciant gem allows for just a use case.
+The [insouciant](https://en.wiktionary.org/wiki/insouciant) gem allows for
+just such a use case.
 
 The single method in this gem, Object::insouciant allows code to be run in a
 simple and care free manner.
+
+Now for some back story. In 2014, I had the wonderful experience of visiting
+Germany for a cruise on the Elbe river. One of the stops was the
+[Sanssouci](https://en.wikipedia.org/wiki/Sanssouci) palace in Potsdam near
+Berlin. The palace was the refuge of Frederick the Great, King of Prussia.
+A safe place without the worries, stress or concerns of that troubled man.
+
+In English this is translated as "insouciant" and is the inspiration for this gem.
 
 ## Installation
 
