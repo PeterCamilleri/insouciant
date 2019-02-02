@@ -8,3 +8,9 @@ Rake::TestTask.new(:test) do |t|
 end
 
 task :default => :test
+
+desc "What version of insouciant is this?"
+task :vers do |t|
+  puts
+  puts "insouciant version = #{::Insouciant::VERSION}"
+end

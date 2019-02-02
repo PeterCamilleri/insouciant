@@ -1,6 +1,14 @@
-require "insouciant/version"
+require_relative "insouciant/version"
 
-module Insouciant
-  class Error < StandardError; end
-  # Your code goes here...
+class Object
+
+private
+
+  # Run some code with (almost) no worries.
+  def insouciant(error_value = :insouciant_default)
+    yield
+  rescue => err
+    (error_value == :insouciant_default) ? err.to_s : error_value
+  end
+
 end
