@@ -40,7 +40,26 @@ Or install it yourself as:
 
 ## Usage
 
-WIP
+To use this gem simply:
+
+```ruby
+require 'insouciant'
+```
+
+Then, wherever dodgy code may lurk, render it worry free. For example:
+
+```ruby
+insouciant {latest_version_for("mysh").to_s}
+```
+
+If an error should occur, the error string of the exception will be returned.
+You may also choose to specify an alternate return value:
+
+```ruby
+insouciant("<Error>") {latest_version_for("mysh").to_s}
+```
+And that is it. Compact, easy-to-use, easy-to-deal-with, and above all, trouble
+and worry free!
 
 ## Contributing
 
