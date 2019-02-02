@@ -22,8 +22,11 @@ class InsouciantTest < Minitest::Test
   end
 
   def test_no_worries
-    assert_equal("divided by 0", insouciant { 1/0 } )
+    assert_equal(12.0, insouciant { 36.0/3.0 } )
 
+    assert_equal("divided by 0", insouciant { 1/0 } )
+    assert_nil(insouciant(nil) { 1/0 } )
+    assert((insouciant(Float::NAN) { 1/0 }).nan?)
   end
 
 end
