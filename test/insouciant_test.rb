@@ -29,4 +29,8 @@ class InsouciantTest < Minitest::Test
     assert((insouciant(Float::NAN) { 1/0 }).nan?)
   end
 
+  def test_no_warnings
+    assert_silent { insouciant { warn "foo" } }
+  end
+
 end
